@@ -3,14 +3,14 @@ import 'dart:math';
 import 'package:flowers/flower_painter.dart';
 import 'package:flutter/material.dart';
 
-class FlowerLoadingAnimation extends StatefulWidget {
-  const FlowerLoadingAnimation({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  FlowerLoadingAnimationState createState() => FlowerLoadingAnimationState();
+  HomePageState createState() => HomePageState();
 }
 
-class FlowerLoadingAnimationState extends State<FlowerLoadingAnimation> with SingleTickerProviderStateMixin {
+class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
   List<Widget> confetti = [const SizedBox.shrink()];
   List<Color> colors = [Colors.red, Colors.pink, Colors.yellow, Colors.orange[400]!, Colors.lightBlue, Colors.purple[300]!];
 
