@@ -40,7 +40,7 @@ class _ProposalPageState extends State<ProposalPage> {
     return Column(
       spacing: 20,
       children: [
-        if (gifPath.isNotEmpty) Image.asset(gifPath),
+        if (gifPath.isNotEmpty) Image.asset(gifPath, height: 300, width: double.infinity, fit: BoxFit.fitHeight),
         Text(
           comment,
           style: TextStyle(fontFamily: GoogleFonts.lato().fontFamily, fontSize: 12, fontWeight: FontWeight.w900),

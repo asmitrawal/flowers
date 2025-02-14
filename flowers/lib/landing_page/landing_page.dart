@@ -2,7 +2,6 @@ import 'package:flowers/flower_page.dart';
 import 'package:flowers/landing_page/animating_text.dart';
 import 'package:flowers/landing_page/pulsating_heart.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -25,7 +24,11 @@ class LandingPage extends StatelessWidget {
               ),
               Text(
                 "Tap the heart to begin...",
-                style: TextStyle(fontFamily: GoogleFonts.lato().fontFamily, fontSize: 12, fontWeight: FontWeight.w300),
+                style: TextStyle(
+                  fontFamily: "Lato",
+                  fontSize: 12,
+                  fontWeight: FontWeight.w300,
+                ),
               ),
             ],
           ),

@@ -83,6 +83,13 @@ flutter:
    - family: Rochester
      fonts: 
         - asset: assets/fonts/Rochester-Regular.ttf
+   - family: Lato
+     fonts: 
+        - asset: assets/fonts/Lato-Regular.ttf
+        - asset: assets/fonts/Lato-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Lato-Light.ttf
+          weight: 300
     # - family: Schyler
     #   fonts:
     #     - asset: fonts/Schyler-Regular.ttf

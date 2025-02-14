@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flowers/flower_painter.dart';
 import 'package:flowers/proposal_page.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class FlowerPage extends StatefulWidget {
   const FlowerPage({super.key});
@@ -44,12 +43,12 @@ class FlowerPageState extends State<FlowerPage> with TickerProviderStateMixin {
                   ),
                   Text(
                     "Tap on the flower for a surprise...",
-                    style: TextStyle(fontFamily: GoogleFonts.lato().fontFamily, fontSize: 12, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontFamily: "Lato", fontSize: 12, fontWeight: FontWeight.w300),
                   ),
                   AnimatedOpacity(
                     duration: Duration(milliseconds: 1000),
                     opacity: textOpacity,
-                    child: Text("Long press to continue...", style: TextStyle(fontFamily: GoogleFonts.lato().fontFamily, fontSize: 12, fontWeight: FontWeight.bold)),
+                    child: Text("Long press to continue...", style: TextStyle(fontFamily: "Lato", fontSize: 12, fontWeight: FontWeight.bold)),
                   )
                 ],
               ),
@@ -80,13 +79,14 @@ class FlowerPageState extends State<FlowerPage> with TickerProviderStateMixin {
         Future.delayed(Duration(milliseconds: delay), () {
           animationController.forward();
         });
+
         return AnimatedBuilder(
           animation: animation,
           builder: (context, child) {
             return Positioned(
               left: leftStart + animation.value * drift,
               // top: animation.value * MediaQuery.of(context).size.height - MediaQuery.of(context).padding.bottom - 30,
-              top: startHeight + (animation.value * (MediaQuery.of(context).size.height - startHeight)) - MediaQuery.of(context).padding.bottom - 30,
+              top: startHeight + (animation.value * (MediaQuery.of(context).size.height - startHeight)) - 60,
               child: Transform.rotate(
                 angle: animation.value * rotation,
                 child: Icon(Icons.favorite, color: color, size: 60),
